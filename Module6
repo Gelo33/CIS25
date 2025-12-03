@@ -1,0 +1,52 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+class Item {
+public:
+    string name;
+    int quantity;
+
+    // Writes: name,quantity to items.txt
+    void saveToFile() {
+        ofstream out("items.txt");
+
+        if (out.is_open()) {
+            out << name << "," << quantity << endl;
+            out.close();
+            cout << "Item saved to file." << endl;
+        } else {
+            cout << "Unable to open file for writing." << endl;
+        }
+    }
+
+    // Reads and prints all lines from items.txt
+    void loadFromFile() {
+        ifstream in("items.txt");
+
+        if (in.is_open()) {
+            string line;
+            while (getline(in, line)) {
+                cout << "File content: " << line << endl;
+            }
+            in.close();
+        } else {
+            cout << "Unable to open file for reading." << endl;
+        }
+    }
+};
+
+int main() {
+    Item tool;
+
+    // Assign values to the object
+    tool.name = "Screwdriver";
+    tool.quantity = 10;
+
+    // Save to file, then read from file
+    tool.saveToFile();
+    tool.loadFromFile();
+
+    return 0;
+}
