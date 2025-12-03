@@ -29,7 +29,7 @@ public:
 };
 
 int main() {
-    // Create a Product object with any values you like
+    
     Product p(101, "Notebook", 4.99f);
 
     // Verify data with printDetails()

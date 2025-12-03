@@ -44,7 +44,6 @@ int main() {
     tool.name = "Screwdriver";
     tool.quantity = 10;
 
-    // Save to file, then read from file
     tool.saveToFile();
     tool.loadFromFile();
 
