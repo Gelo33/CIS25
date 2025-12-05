@@ -3,7 +3,7 @@ Week 6 Module7.ccp
 
 this program demonstrates dynamic arrays and binary search in C++
 
-THis program defines a structure 
+This program defines a structure 
 
 '''cpp
 struct Item {
